@@ -11,7 +11,7 @@ El objetivo es automatizar la clasificación inicial de tickets usando técnicas
 ---
 
 ## 📂 Estructura del proyecto
-
+```
 ticket-classifier-ml/
 │
 ├── data/ # Datos de entrenamiento
@@ -27,7 +27,7 @@ ticket-classifier-ml/
 ├── start_api.bat # Script para levantar la API en Windows
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
@@ -62,19 +62,19 @@ La API expone un endpoint para clasificar texto.
 ### ▶️ Levantar la API (Windows)
 
 Doble click en:
-
+```
 start_api.bat
-
+```
 O desde terminal:
-
+```
 python -m uvicorn src.api.app:app
-
+```
 ---
 
 La API queda disponible en:
-
+```
 http://127.0.0.1:8000/docs
-
+```
 ---
 
 ### 📡 Endpoint
@@ -82,13 +82,13 @@ http://127.0.0.1:8000/docs
 POST /predict
 
 Input
-
+```
 {
   "texto": "error al guardar usuario"
 }
-
+```
 Output
-
+```
 {
   "categoria": "bug",
   "probabilidades": {
@@ -97,7 +97,7 @@ Output
     "feature": 0.10
   }
 }
-
+```
 ---
 
 ### 🔍 Interpretabilidad
